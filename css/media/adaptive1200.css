@@ -1,0 +1,44 @@
+@media (max-width: 1200px) {
+    .hero__container,
+    .contact__container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero__content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero__features {
+        align-items: center;
+    }
+
+    .hero__feature {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contact__form-wrapper {
+        border-radius: var(--radius-lg);
+    }
+
+    .contact__image-wrapper {
+        border-radius: var(--radius-lg);
+        min-height: 400px;
+    }
+
+    .benefits__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits__image-wrapper--secondary {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .benefits__list {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}

@@ -1,0 +1,17 @@
+@import "./global/container.css";
+@import "./global/fonts.css";
+@import "./global/modal.css";
+@import "./global/reboot.css";
+
+
+
+@import "./block/benefits-section.css";
+@import "./block/contact-section.css";
+@import "./block/footer.css";
+@import "./block/header.css";
+@import "./block/hero.css";
+@import "./block/utilites.css";
+
+@import "./media/adaptive1200.css";
+@import "./media/adaptive480.css";
+@import "./media/adaptive768.css";

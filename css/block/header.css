@@ -1,0 +1,68 @@
+
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(34, 34, 34, 0.95);
+    backdrop-filter: blur(10px);
+    height: var(--header-height);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+}
+
+.header__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.header__logo-link {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.header__logo-link:hover {
+    transform: scale(1.05);
+}
+
+.header__menu {
+    display: flex;
+    gap: 40px;
+}
+
+.header__menu-link {
+    position: relative;
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.header__menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-light);
+    transition: width 0.3s ease;
+}
+
+.header__menu-link:hover::after {
+    width: 100%;
+}
+
+

@@ -1,0 +1,32 @@
+@media (max-width: 480px) {
+    .header__nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header__menu {
+        align-items: center;
+    }
+
+    .header__container {
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .header__menu-link {
+      font-size: 12px;
+    }
+
+    .hero__feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact__form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .contact__assistant {
+      display: none;
+    }
+}

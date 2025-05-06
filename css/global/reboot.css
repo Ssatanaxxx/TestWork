@@ -1,0 +1,83 @@
+/* ==========================================================================
+   #BASE
+   ========================================================================== */
+   :root {
+    --color-dark: #222222;
+    --color-dark-alt: #282829;
+    --color-light: #FFFFFF;
+    --color-light-alt: #F0F0F0;
+    --color-accent: #3A86FF;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --font-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --transition-base: all 0.3s ease;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --container-width: 1200px;
+    --header-height: 80px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.benefits__icon {
+  width: 58px;
+  height: 47px;
+}
+
+body {
+    font-family: var(--font-base);
+    line-height: 1.5;
+    color: var(--color-light);
+    background-color: var(--color-dark-alt);
+    overflow-x: hidden;
+    padding-top: var(--header-height);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: var(--transition-base);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Анимация появления номера */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.hotline-animate {
+  animation: pulse 0.5s ease;
+}
