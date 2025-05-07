@@ -1,0 +1,71 @@
+:root {
+    --orange-overlay: rgba(255, 165, 0, 0.3);
+    --base-font-size: clamp(2rem, 5vw, 4.25rem);
+    --base-video-height: clamp(30px, 5vw, 50px);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.content-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 15px);
+    margin: clamp(10px, 2vw, 20px) 0;
+}
+
+.text-block {
+    font-size: var(--base-font-size);
+    font-weight: 700;
+    white-space: nowrap;
+    transition: font-size 0.3s ease;
+}
+
+.video-brick {
+    height: var(--base-video-height);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.video-brick video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.orange-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--orange-overlay);
+    mix-blend-mode: multiply;
+}
+
+@media (max-width: 780px) {
+    .content-flow {
+        justify-content: flex-start;
+    }
+    
+    .text-block {
+        white-space: normal;
+        line-height: 1.3;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текст с видео-блоками</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-flow">
+            <div class="text-block">We're here</div>
+            <div class="video-brick" style="width: clamp(60px, 10vw, 100px);">
+                <video autoplay loop muted playsinline preload="auto" loading="lazy">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <div class="orange-overlay"></div>
+            </div>
+            <div class="text-block">to make</div>
+            <div class="video-brick" style="width: clamp(30px, 5vw, 50px);">
+                <video autoplay loop muted playsinline preload="auto" loading="lazy">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <div class="orange-overlay"></div>
+            </div>
+            <div class="text-block">healthy</div>
+            <div class="video-brick" style="width: clamp(120px, 20vw, 200px);">
+                <video autoplay loop muted playsinline preload="auto" loading="lazy">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <div class="orange-overlay"></div>
+            </div>
+            <div class="text-block">living effortless,</div>
+            <div class="video-brick" style="width: clamp(30px, 5vw, 50px);">
+                <video autoplay loop muted playsinline preload="auto" loading="lazy">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <div class="orange-overlay"></div>
+            </div>
+            <div class="text-block">so you can</div>
+            <div class="video-brick" style="width: clamp(120px, 20vw, 200px);">
+                <video autoplay loop muted playsinline preload="auto" loading="lazy">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <div class="orange-overlay"></div>
+            </div>
+            <div class="text-block">live longer</div>
+            <div class="video-brick" style="width: clamp(270px, 45vw, 450px);">
+                <video autoplay loop muted playsinline preload="auto" loading="lazy">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <div class="orange-overlay"></div>
+            </div>
+            <div class="text-block">and happier</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                video.setAttribute('preload', 'auto');
+                video.setAttribute('loading', 'lazy');
+            });
+            
+            // Плавное изменение размеров при resize
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                document.body.classList.add('resize-animation-stopper');
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    document.body.classList.remove('resize-animation-stopper');
+                }, 100);
+            });
+        });
+    </script>
+</body>
+
+</html>
